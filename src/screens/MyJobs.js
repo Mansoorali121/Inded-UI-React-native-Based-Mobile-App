@@ -1,13 +1,14 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import MytabNavigation from "./src/navigation/MytabNavigation"
 
-const App = () => {
+const MyJobs = () => {
   return (
-    <MytabNavigation/>
+    <View>
+      <Text>MyJobs</Text>
+    </View>
   )
 }
 
-export default App;
+export default MyJobs;
 
 const styles = StyleSheet.create({})
