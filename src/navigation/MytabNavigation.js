@@ -12,28 +12,35 @@ const Tab = createBottomTabNavigator();
 const MytabNavigation = () => {
   return (
     <NavigationContainer>
-        <Tab.Navigator>
-      <Tab.Screen
-        name="Home"
-        component={Home}
-        options={{ headerShown: false }}
-      />
-      <Tab.Screen
-        name="Myjobs"
-        component={MyJobs}
-        options={{ headerShown: false }}
-      />
-      <Tab.Screen
-        name="Messages"
-        component={Messages}
-        options={{ headerShown: false }}
-      />
-      <Tab.Screen
-        name="Profile"
-        component={Profile}
-        options={{ headerShown: false }}
-      />
-    </Tab.Navigator>
+      <Tab.Navigator>
+        <Tab.Screen
+          name="Home"
+          component={Home}
+          options={{ headerShown: false }}
+        />
+        <Tab.Screen
+          name="Myjobs"
+          component={MyJobs}
+          options={{ headerShown: false }}
+        />
+        <Tab.Screen
+          name="Messages"
+          component={Messages}
+          options={{
+            headerShown: false,
+            tabBarLabelStyle: {
+              fontSize: 16,
+              fontFamily: 'Georgia',
+              fontWeight: 300,
+            },
+          }}
+        />
+        <Tab.Screen
+          name="Profile"
+          component={Profile}
+          options={{ headerShown: false }}
+        />
+      </Tab.Navigator>
     </NavigationContainer>
   );
 };
