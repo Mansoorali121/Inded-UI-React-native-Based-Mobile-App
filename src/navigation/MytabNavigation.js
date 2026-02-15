@@ -16,12 +16,24 @@ const MytabNavigation = () => {
         <Tab.Screen
           name="Home"
           component={Home}
-          options={{ headerShown: false }}
+          options={{ headerShown: false ,
+              tabBarLabelStyle: {
+      fontSize: 16,
+      fontFamily: 'Georgia',
+      fontWeight: 300,
+    },
+          }}
         />
         <Tab.Screen
           name="Myjobs"
           component={MyJobs}
-          options={{ headerShown: false }}
+          options={{ headerShown: false ,
+              tabBarLabelStyle: {
+      fontSize: 16,
+      fontFamily: 'Georgia',
+      fontWeight: 300,
+    },
+          }}
         />
         <Tab.Screen
           name="Messages"
