@@ -21,7 +21,7 @@ const MytabNavigation = () => {
             tabBarIcon: ({ size, color }) => {
               return (
                 <Image
-                  style={{ height: size, width: size }}
+                  style={{ height: size, width: size, tintColor:color }}
                   source={require('../assets/home.png')}
                 />
               );
@@ -36,7 +36,7 @@ const MytabNavigation = () => {
             tabBarIcon: ({ size, color }) => {
               return (
                 <Image
-                  style={{ height: size, width: size }}
+                  style={{ height: size, width: size, tintColor:color }}
                   source={require('../assets/job-advertisement.png')}
                 />
               );
@@ -52,7 +52,7 @@ const MytabNavigation = () => {
               return (
                 <Image
                   source={require('../assets/comment.png')}
-                  style={{ height: size, width: size }}
+                  style={{ height: size, width: size, tintColor:color }}
                 />
               );
             },
@@ -67,7 +67,7 @@ const MytabNavigation = () => {
               return (
                 <Image
                   source={require('../assets/user.png')}
-                  style={{ height: size, width: size }}
+                  style={{ height: size, width: size , tintColor:color}}
                 />
               );
             },
