@@ -4,10 +4,7 @@ import MytabNavigation from "./src/navigation/MytabNavigation"
 
 const App = () => {
   return (
-    <View>
-      <Text>Hello World </Text>
-    </View>
-  
+    <MytabNavigation/>
   )
 }
 

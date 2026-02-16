@@ -12,5 +12,5 @@ const Home = () => {
 export default Home;
 
 const styles = StyleSheet.create({
-  container: { backgroundColor: '#fff', paddingHorizontal: 20 },
+  container: { backgroundColor: '#fff',flex:1},
 });
