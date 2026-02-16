@@ -12,7 +12,16 @@ const Tab = createBottomTabNavigator();
 const MytabNavigation = () => {
   return (
     <NavigationContainer>
-      <Tab.Navigator>
+      <Tab.Navigator
+        screenOptions={{
+          tabBarStyle: {
+            height: 60,
+            borderTopWidth: 0,
+            elevation: 0,
+            shadowOpacity: 0,
+          },
+        }}
+      >
         <Tab.Screen
           name="Home"
           component={Home}
@@ -21,7 +30,7 @@ const MytabNavigation = () => {
             tabBarIcon: ({ size, color }) => {
               return (
                 <Image
-                  style={{ height: size, width: size, tintColor:color }}
+                  style={{ height: size, width: size, tintColor: color }}
                   source={require('../assets/home.png')}
                 />
               );
@@ -36,7 +45,7 @@ const MytabNavigation = () => {
             tabBarIcon: ({ size, color }) => {
               return (
                 <Image
-                  style={{ height: size, width: size, tintColor:color }}
+                  style={{ height: size, width: size, tintColor: color }}
                   source={require('../assets/job-advertisement.png')}
                 />
               );
@@ -52,7 +61,7 @@ const MytabNavigation = () => {
               return (
                 <Image
                   source={require('../assets/comment.png')}
-                  style={{ height: size, width: size, tintColor:color }}
+                  style={{ height: size, width: size, tintColor: color }}
                 />
               );
             },
@@ -67,7 +76,7 @@ const MytabNavigation = () => {
               return (
                 <Image
                   source={require('../assets/user.png')}
-                  style={{ height: size, width: size , tintColor:color}}
+                  style={{ height: size, width: size, tintColor: color }}
                 />
               );
             },
