@@ -6,6 +6,7 @@ import MyJobs from '../screens/MyJobs';
 import Messages from '../screens/Messages';
 import Profile from '../screens/Profile';
 import { NavigationContainer } from '@react-navigation/native';
+import CoustomTabBar from './CoustomTabBar';
 
 const Tab = createBottomTabNavigator();
 
@@ -21,6 +22,7 @@ const MytabNavigation = () => {
             shadowOpacity: 0,
           },
         }}
+        tabBar={props => <CoustomTabBar {...props} />}
       >
         <Tab.Screen
           name="Home"
