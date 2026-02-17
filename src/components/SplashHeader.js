@@ -17,6 +17,6 @@ export default SplashHeader;
 
 const styles = StyleSheet.create({
   container: { alignItems: 'center', marginTop: 70 },
-  logoimage: { height: 100, width: '80%',resizeMode:"stretch" },
-  headertext: { fontSize: 17, top: 5, fontWeight: 'bold' },
+  logoimage: { height: 100, width: '60%', resizeMode: 'stretch' },
+  headertext: { fontSize: 16, top: 5, fontFamily: 'Audiowide-Regular' },
 });
