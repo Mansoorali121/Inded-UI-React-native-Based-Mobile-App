@@ -3,6 +3,7 @@ import React from 'react';
 import BackButton from '../components/Backbutton';
 import HomeBtn from '../components/HomeBtn';
 import { s } from 'react-native-size-matters';
+import Indedlogo from '../components//Indedlogo';
 
 const Login = () => {
   return (
@@ -11,6 +12,8 @@ const Login = () => {
         <BackButton />
         <HomeBtn />
       </View>
+      {/* Indeed Logo Here */}
+      <Indedlogo />
     </View>
   );
 };
@@ -23,5 +26,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     top: s(40),
     justifyContent: 'space-between',
+    marginBottom: s(50),
   },
 });
