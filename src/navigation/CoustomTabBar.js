@@ -20,11 +20,10 @@ const CoustomTabBar = ({ state, descriptors, navigation }) => {
               justifyContent: 'center',
               alignItems: 'center',
               gap: 10,
-              borderTopWidth: state.index == index ? 2:0,
-              borderTopColor:"blue",
-              height:"100%",
-              justifyContent:"center"
-
+              borderTopWidth: state.index == index ? 2 : 0,
+              borderTopColor: 'blue',
+              height: '100%',
+              justifyContent: 'center',
             }}
             onPress={() => navigation.navigate(tab.name)}
           >
