@@ -5,14 +5,12 @@ import Home from '../screens/Home';
 import MyJobs from '../screens/MyJobs';
 import Messages from '../screens/Messages';
 import Profile from '../screens/Profile';
-import { NavigationContainer } from '@react-navigation/native';
 import CoustomTabBar from './CoustomTabBar';
 
 const Tab = createBottomTabNavigator();
 
 const MytabNavigation = () => {
   return (
-    <NavigationContainer>
       <Tab.Navigator
         screenOptions={{
           tabBarStyle: {
@@ -85,7 +83,6 @@ const MytabNavigation = () => {
           }}
         />
       </Tab.Navigator>
-    </NavigationContainer>
   );
 };
 

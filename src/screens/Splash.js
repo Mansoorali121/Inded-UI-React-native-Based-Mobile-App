@@ -1,13 +1,14 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import StackNavigation from "./src/navigation/StackNavigation"
 
-const App = () => {
+const Splash = () => {
   return (
-    <StackNavigation/>
+    <View>
+      <Text>Splash</Text>
+    </View>
   )
 }
 
-export default App;
+export default Splash;
 
 const styles = StyleSheet.create({})
