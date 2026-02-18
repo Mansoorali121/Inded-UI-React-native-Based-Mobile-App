@@ -1,5 +1,5 @@
 import { StyleSheet, Text, View } from 'react-native';
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import BackButton from '../components/Backbutton';
 import HomeBtn from '../components/HomeBtn';
 import { s, vs } from 'react-native-size-matters';
@@ -10,8 +10,21 @@ import MytextInput from '../components/MytextInput';
 import Continuebtn from '../components/Continuebtn';
 import { useNavigation } from '@react-navigation/native';
 
+
 const Login = () => {
   const navigation = useNavigation();
+  // Focus on UI 
+  const inputRef = useRef(null);
+
+  const [email,setEmail] = useState("");
+
+
+  useEffect(()=>{
+    inputRef.current.focus();
+
+  },[])
+
+  const isvalid = email.trim().length > 0;
   return (
     <View style={styles.container}>
       <View style={styles.headercontainer}>
@@ -30,9 +43,9 @@ const Login = () => {
           All fields marked with * are required
         </Text>
         {/* TextInput Component */}
-        <MytextInput />
+        <MytextInput ref={inputRef}  value={email} onChangeText={setEmail} />
         {/* Continue Button implement */}
-        <Continuebtn />
+        <Continuebtn disabled={!isvalid} />
       </View>
     </View>
   );

@@ -2,10 +2,13 @@ import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import React from 'react';
 import { s, vs } from 'react-native-size-matters';
 
-const Continuebtn = () => {
+const Continuebtn = ({ disabled }) => {
   return (
     <View style={styles.container}>
-      <TouchableOpacity style={styles.btn}>
+      <TouchableOpacity
+        disabled={disabled}
+        style={[styles.btn, { opacity: disabled ? 0.3 : 1 }]}
+      >
         <Text style={styles.btntext}>Continue</Text>
         <Image
           source={require('../assets/right-arrow.png')}
@@ -29,12 +32,11 @@ const styles = StyleSheet.create({
     borderRadius: s(10),
     flexDirection: 'row',
   },
-  image: { height: s(30), width: vs(40), marginStart: s(10), opacity: 0.2 },
+  image: { height: s(30), width: vs(40), marginStart: s(10) },
   btntext: {
     color: '#fff',
     fontWeight: 'bold',
     fontSize: s(16),
     fontFamily: 'NovaFlat-Regular',
-    opacity: 0.5,
   },
 });
