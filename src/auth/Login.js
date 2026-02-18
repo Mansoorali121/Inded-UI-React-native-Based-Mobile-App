@@ -8,12 +8,14 @@ import CardParagraph from '../components/CardParagraph';
 import Googlebutton from '../components/Googlebutton';
 import MytextInput from '../components/MytextInput';
 import Continuebtn from '../components/Continuebtn';
+import { useNavigation } from '@react-navigation/native';
 
 const Login = () => {
+  const navigation = useNavigation();
   return (
     <View style={styles.container}>
       <View style={styles.headercontainer}>
-        <BackButton />
+        <BackButton onPress={()=>navigation.goBack()} />
         <HomeBtn />
       </View>
       {/* Indeed Logo Here */}

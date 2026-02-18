@@ -2,9 +2,9 @@ import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import React from 'react';
 import { s, vs, ms } from 'react-native-size-matters';
 
-const Mybutton = ({ title, color, textcolor }) => {
+const Mybutton = ({ title, color, textcolor , onPress}) => {
   return (
-    <TouchableOpacity style={[styles.container, { backgroundColor: color }]}>
+    <TouchableOpacity onPress={onPress} style={[styles.container, { backgroundColor: color }]}>
       <Text style={[styles.btntext, { color: textcolor }]}>{title}</Text>
     </TouchableOpacity>
   );

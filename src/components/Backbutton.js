@@ -2,9 +2,9 @@ import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import React from 'react';
 import { s, vs } from 'react-native-size-matters';
 
-const Backbutton = () => {
+const Backbutton = ({onPress}) => {
   return (
-    <TouchableOpacity style={styles.backButton}>
+    <TouchableOpacity onPress={onPress} style={styles.backButton}>
       <Image
         source={require('../assets/left-arrow.png')}
         style={styles.image}
