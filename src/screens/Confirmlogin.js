@@ -1,11 +1,13 @@
 import { StyleSheet, Text, View } from 'react-native';
 import React from 'react';
-import { s } from 'react-native-size-matters';
+import { s, vs } from 'react-native-size-matters';
 import { useNavigation } from '@react-navigation/native';
 import BackButton from '../components/Backbutton';
 import HomeBtn from '../components/HomeBtn';
 import Indedlogo from '../components/Indedlogo';
-
+import CSHeader from '../components/CSHeader';
+import Googlebutton from '../components/Googlebutton';
+import Csfooter from "../components/Csfooter";
 const Confirmlogin = () => {
   const navigation = useNavigation();
   return (
@@ -16,6 +18,17 @@ const Confirmlogin = () => {
       </View>
       {/* Indeed Logo Here */}
       <Indedlogo />
+      {/* Card View to Show Details  */}
+      <View style={styles.maincardview}>
+        {/* header Items Here */}
+     
+          <CSHeader />
+       <View style={{marginTop:s(20)}}>
+         <Googlebutton/>
+       </View>
+       {/* Footer Items Here */}
+       <Csfooter/>
+      </View>
     </View>
   );
 };
@@ -29,5 +42,13 @@ const styles = StyleSheet.create({
     top: s(40),
     justifyContent: 'space-between',
     marginBottom: s(50),
+  },
+  maincardview: {
+    backgroundColor: '#fff4f499',
+    top: s(20),
+    height: s(480),
+    width: vs('100%'),
+    borderRadius: s(12),
+    marginBottom: s(20),
   },
 });

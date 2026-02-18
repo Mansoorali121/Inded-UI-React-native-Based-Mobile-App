@@ -9,9 +9,7 @@ const Googlebutton = () => {
         <Image source={require('../assets/google.png')} style={styles.image} />
         <Text style={styles.btntext}>Continue with Google</Text>
       </TouchableOpacity>
-      <View>
-        <Text style={styles.orText}>---------------------------- or ----------------------------</Text>
-      </View>
+      
     </View>
   );
 };
@@ -39,6 +37,6 @@ const styles = StyleSheet.create({
     fontFamily: 'NovaFlat-Regular',
     marginBottom: s(10),
   },
-  orText:{textAlign:"center", fontSize:ms(14),color:"gray",marginTop:s(15)},
+
 
 });

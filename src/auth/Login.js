@@ -2,7 +2,7 @@ import { Alert, StyleSheet, Text, View } from 'react-native';
 import React, { useEffect, useRef, useState } from 'react';
 import BackButton from '../components/Backbutton';
 import HomeBtn from '../components/HomeBtn';
-import { s, vs } from 'react-native-size-matters';
+import { ms, s, vs } from 'react-native-size-matters';
 import Indedlogo from '../components//Indedlogo';
 import CardParagraph from '../components/CardParagraph';
 import Googlebutton from '../components/Googlebutton';
@@ -36,6 +36,11 @@ const Login = () => {
         <CardParagraph />
         {/* Continue with google button */}
         <Googlebutton />
+        <View>
+          <Text style={styles.orText}>
+            ---------------------------- or ----------------------------
+          </Text>
+        </View>
         <Text style={styles.allFieldsText}>
           All fields marked with * are required
         </Text>
@@ -75,4 +80,5 @@ const styles = StyleSheet.create({
     fontSize: vs(12),
     color: 'gray',
   },
+    orText:{textAlign:"center", fontSize:ms(14),color:"gray",marginTop:s(15)},
 });
