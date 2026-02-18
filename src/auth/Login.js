@@ -6,6 +6,7 @@ import { s, vs } from 'react-native-size-matters';
 import Indedlogo from '../components//Indedlogo';
 import CardParagraph from '../components/CardParagraph';
 import Googlebutton from '../components/Googlebutton';
+import MytextInput from '../components/MytextInput';
 
 const Login = () => {
   return (
@@ -25,6 +26,8 @@ const Login = () => {
         <Text style={styles.allFieldsText}>
           All fields marked with * are required
         </Text>
+        {/* TextInput Component */}
+        <MytextInput />
       </View>
     </View>
   );
@@ -42,7 +45,7 @@ const styles = StyleSheet.create({
   },
   maincardview: {
     backgroundColor: '#fff4f499',
-    top: s(40),
+    top: s(30),
     height: s(500),
     width: vs('100%'),
     borderRadius: s(12),

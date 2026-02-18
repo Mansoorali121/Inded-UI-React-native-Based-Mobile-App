@@ -16,6 +16,6 @@ const Indedlogo = () => {
 export default Indedlogo;
 
 const styles = StyleSheet.create({
-  container: { alignItems: 'center', top: s(40) },
+  container: { alignItems: 'center', top: s(20) },
   logoimage: { height: s(40), width: vs(100), marginBottom: s(10) },
 });
