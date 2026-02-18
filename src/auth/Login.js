@@ -2,8 +2,9 @@ import { StyleSheet, Text, View } from 'react-native';
 import React from 'react';
 import BackButton from '../components/Backbutton';
 import HomeBtn from '../components/HomeBtn';
-import { s } from 'react-native-size-matters';
+import { s, vs } from 'react-native-size-matters';
 import Indedlogo from '../components//Indedlogo';
+import CardParagraph from "../components/CardParagraph";
 
 const Login = () => {
   return (
@@ -14,6 +15,11 @@ const Login = () => {
       </View>
       {/* Indeed Logo Here */}
       <Indedlogo />
+      {/* Main View to wrap everything inside it */}
+      <View style={styles.maincardview}>
+        {/* All the Materials here */}
+        <CardParagraph/>
+      </View>
     </View>
   );
 };
@@ -27,5 +33,12 @@ const styles = StyleSheet.create({
     top: s(40),
     justifyContent: 'space-between',
     marginBottom: s(50),
+  },
+  maincardview: {
+    backgroundColor: '#fff4f499',
+    top: s(40),
+    height: s(500),
+    width: vs('100%'),
+    borderRadius: s(12),
   },
 });
