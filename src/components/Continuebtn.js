@@ -2,10 +2,11 @@ import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import React from 'react';
 import { s, vs } from 'react-native-size-matters';
 
-const Continuebtn = ({ disabled }) => {
+const Continuebtn = ({ disabled, onPress }) => {
   return (
     <View style={styles.container}>
       <TouchableOpacity
+      onPress={onPress}
         disabled={disabled}
         style={[styles.btn, { opacity: disabled ? 0.3 : 1 }]}
       >

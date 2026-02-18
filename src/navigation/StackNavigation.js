@@ -6,6 +6,7 @@ import MytabNavigation from './MytabNavigation';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { NavigationContainer } from '@react-navigation/native';
 import Splash from '../screens/Splash';
+import Confirmlogin from '../screens/Confirmlogin';
 
 const Stack = createNativeStackNavigator();
 
@@ -13,8 +14,6 @@ const StackNavigation = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        
-        
         <Stack.Screen
           name="Splash"
           component={Splash}
@@ -28,6 +27,11 @@ const StackNavigation = () => {
         <Stack.Screen
           name="SignUp"
           component={SignUp}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Confirmlogin"
+          component={Confirmlogin}
           options={{ headerShown: false }}
         />
         <Stack.Screen
