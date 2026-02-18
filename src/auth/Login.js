@@ -7,6 +7,7 @@ import Indedlogo from '../components//Indedlogo';
 import CardParagraph from '../components/CardParagraph';
 import Googlebutton from '../components/Googlebutton';
 import MytextInput from '../components/MytextInput';
+import Continuebtn from '../components/Continuebtn';
 
 const Login = () => {
   return (
@@ -28,6 +29,8 @@ const Login = () => {
         </Text>
         {/* TextInput Component */}
         <MytextInput />
+        {/* Continue Button implement */}
+        <Continuebtn />
       </View>
     </View>
   );
@@ -46,7 +49,7 @@ const styles = StyleSheet.create({
   maincardview: {
     backgroundColor: '#fff4f499',
     top: s(30),
-    height: s(500),
+    height: s(520),
     width: vs('100%'),
     borderRadius: s(12),
     marginBottom: s(20),
