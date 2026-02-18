@@ -4,7 +4,8 @@ import BackButton from '../components/Backbutton';
 import HomeBtn from '../components/HomeBtn';
 import { s, vs } from 'react-native-size-matters';
 import Indedlogo from '../components//Indedlogo';
-import CardParagraph from "../components/CardParagraph";
+import CardParagraph from '../components/CardParagraph';
+import Googlebutton from '../components/Googlebutton';
 
 const Login = () => {
   return (
@@ -18,7 +19,12 @@ const Login = () => {
       {/* Main View to wrap everything inside it */}
       <View style={styles.maincardview}>
         {/* All the Materials here */}
-        <CardParagraph/>
+        <CardParagraph />
+        {/* Continue with google button */}
+        <Googlebutton />
+        <Text style={styles.allFieldsText}>
+          All fields marked with * are required
+        </Text>
       </View>
     </View>
   );
@@ -40,5 +46,12 @@ const styles = StyleSheet.create({
     height: s(500),
     width: vs('100%'),
     borderRadius: s(12),
+    marginBottom: s(20),
+  },
+  allFieldsText: {
+    marginStart: s(40),
+    marginTop: s(10),
+    fontSize: vs(12),
+    color: 'gray',
   },
 });
