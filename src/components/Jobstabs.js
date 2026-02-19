@@ -5,16 +5,17 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import React from 'react';
+import React, { useState } from 'react';
 import { s, vs } from 'react-native-size-matters';
 
-const TabsArray = ['Saved', 'Applied', 'Interviews'];
+const TabsArray = ['Saved', 'Applied', 'Interviews', 'Archieved'];
 
-const Active_bg = '#75563B';
+const Active_bg = 'black';
 const Active_text = '#fff';
-const Inacctive_text = '#2C2016';
+const Inacctive_text = '#0000';
 
 const Jobstabs = () => {
+  const [activetab, setActivetab] = useState('Saved');
   return (
     <View style={styles.container}>
       <FlatList
@@ -24,8 +25,20 @@ const Jobstabs = () => {
         keyExtractor={item => item}
         renderItem={({ item }) => {
           return (
-            <TouchableOpacity style={styles.tabbutton}>
-              <Text style={{ color: '#fff' }}>{item}</Text>
+            <TouchableOpacity
+              onPress={() => setActivetab(item)}
+              style={[
+                styles.tabbutton,
+                activetab == item && { backgroundColor: Active_bg },
+              ]}
+            >
+              <Text
+                style={{
+                  color: activetab == item ? Active_text : Inacctive_text,
+                }}
+              >
+                {item}
+              </Text>
             </TouchableOpacity>
           );
         }}
@@ -38,19 +51,20 @@ export default Jobstabs;
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: 'red',
-    borderRadius: s(10),
-    height: vs(50),
+    borderRadius: s(20),
+    height: vs(70),
   },
   tabbutton: {
-    backgroundColor: 'blue',
+    backgroundColor: '#f9f9f9',
     marginBottom: vs(5),
     marginRight: s(10),
     alignItems: 'center',
     justifyContent: 'center',
-    height: s(40),
-    marginTop: vs(5),
-    paddingHorizontal: s(20),
+    height: s(50),
+    marginTop: vs(10),
+    paddingHorizontal: s(16),
     marginStart: s(5),
+    borderRadius: s(30),
+    width: vs(100),
   },
 });

@@ -14,5 +14,5 @@ export default Myjobstitle;
 
 const styles = StyleSheet.create({
   container: {marginTop: s(20) },
-  title:{fontSize:s(20),fontFamily:"Audiowide-Regular",marginBottom:s(20)},
+  title:{fontSize:s(20),fontFamily:"Audiowide-Regular",marginBottom:s(15)},
 });
