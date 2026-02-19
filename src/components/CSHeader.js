@@ -2,7 +2,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import React from 'react';
 import { s } from 'react-native-size-matters';
 
-const CSHeader = () => {
+const CSHeader = ({ useremail }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.headertext}>Welcome Back</Text>
@@ -10,7 +10,7 @@ const CSHeader = () => {
       <Text style={styles.normaltext}>Google</Text>
       <View style={{ flexDirection: 'row' }}>
         <Text style={styles.normaltext}>continue as </Text>
-        <Text style={styles.email}>mansoorsahito601@gmail.com</Text>
+        <Text style={styles.email}>{useremail}</Text>
       </View>
       <Text style={styles.linktext}>(not you?)</Text>
     </View>

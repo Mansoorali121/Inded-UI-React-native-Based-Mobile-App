@@ -8,7 +8,8 @@ import Indedlogo from '../components/Indedlogo';
 import CSHeader from '../components/CSHeader';
 import Googlebutton from '../components/Googlebutton';
 import Csfooter from "../components/Csfooter";
-const Confirmlogin = () => {
+const Confirmlogin = ({route}) => {
+  const {useremail} = route.params;
   const navigation = useNavigation();
   return (
     <View style={styles.container}>
@@ -22,7 +23,7 @@ const Confirmlogin = () => {
       <View style={styles.maincardview}>
         {/* header Items Here */}
      
-          <CSHeader />
+          <CSHeader  useremail={useremail}/>
        <View style={{marginTop:s(20)}}>
          <Googlebutton/>
        </View>

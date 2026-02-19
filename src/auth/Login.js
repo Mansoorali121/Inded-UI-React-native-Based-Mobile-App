@@ -49,7 +49,9 @@ const Login = () => {
         {/* Continue Button implement */}
         <Continuebtn
           disabled={!isvalid}
-          onPress={() => navigation.navigate('Confirmlogin')}
+          onPress={() => navigation.navigate('Confirmlogin',{
+            useremail:email,
+          })}
         />
       </View>
     </View>
