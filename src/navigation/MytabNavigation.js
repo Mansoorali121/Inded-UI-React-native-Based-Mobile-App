@@ -15,9 +15,9 @@ const MytabNavigation = () => {
         screenOptions={{
           tabBarStyle: {
             height: 60,
-            borderTopWidth: 0,
-            elevation: 0,
-            shadowOpacity: 0,
+            // borderTopWidth: 0,
+            // elevation: 0,
+            // shadowOpacity: 0,
           },
         }}
         tabBar={props => <CoustomTabBar {...props} />}

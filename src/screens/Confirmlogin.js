@@ -25,7 +25,7 @@ const Confirmlogin = ({route}) => {
      
           <CSHeader  useremail={useremail}/>
        <View style={{marginTop:s(20)}}>
-         <Googlebutton/>
+         <Googlebutton onPress={()=>navigation.navigate("tabs")}/>
        </View>
        {/* Footer Items Here */}
        <Csfooter/>

@@ -2,10 +2,10 @@ import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import React from 'react';
 import { ms, s, vs } from 'react-native-size-matters';
 
-const Googlebutton = () => {
+const Googlebutton = ({onPress}) => {
   return (
-    <View style={styles.container}>
-      <TouchableOpacity style={styles.btn}>
+    <View style={styles.container} >
+      <TouchableOpacity style={styles.btn} onPress={onPress}>
         <Image source={require('../assets/google.png')} style={styles.image} />
         <Text style={styles.btntext}>Continue with Google</Text>
       </TouchableOpacity>

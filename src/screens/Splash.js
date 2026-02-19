@@ -12,49 +12,45 @@ import HomeBtn from '../components/HomeBtn';
 const Splash = () => {
   const navigation = useNavigation();
   // loading Setting
-  const [loading,setLoading] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   // handle Loading
   const handleLoading = () => {
     setLoading(true);
-    setTimeout(()=>{
+    setTimeout(() => {
       setLoading(false);
-      navigation.navigate("Login");
-
-    },2000)
-  }
+      navigation.navigate('Login');
+    }, 2000);
+  };
   return (
     <View style={styles.container}>
       {loading ? (
         <View style={styles.headercontainer}>
-          <Backbutton/>
-          <HomeBtn/>
-             <View style={styles.loaderOverlay}>
-        <ActivityIndicator size="small" color="blue" />
-      </View>
+          <Backbutton />
+          <HomeBtn />
+          <View style={styles.loaderOverlay}>
+            <ActivityIndicator size="small" color="blue" />
           </View>
-     
-
-      ):(
-      <>
-        <SplashHeader />
-      <View style={styles.buttocontainer}>
-        <Mybutton
-          title="Signin"
-          color="blue"
-          textcolor="#fff"
-          onPress={handleLoading}
-        />
-        <Mybutton title="create an account" color="#fff" textcolor="blue" />
-        {/* New text  */}
-        <Text style={styles.linktext}>
-          Recruiment?Visit{' '}
-          <Text style={styles.sublink}>Indeed for employers</Text>
-        </Text>
-      </View>
-      <Splashfooter />
-      
-      </>
+        </View>
+      ) : (
+        <>
+          <SplashHeader />
+          <View style={styles.buttocontainer}>
+            <Mybutton
+              title="Signin"
+              color="blue"
+              textcolor="#fff"
+              onPress={handleLoading}
+            />
+            <Mybutton title="create an account" color="#fff" textcolor="blue" />
+            {/* New text  */}
+            <Text style={styles.linktext}>
+              Recruiment?Visit{' '}
+              <Text style={styles.sublink}>Indeed for employers</Text>
+            </Text>
+          </View>
+          <Splashfooter />
+        </>
       )}
     </View>
   );
@@ -68,20 +64,19 @@ const styles = StyleSheet.create({
   linktext: { marginTop: s(10), fontSize: s(15), marginStart: s(5) },
   sublink: { color: '#227eb7', textDecorationLine: 'underline' },
   loaderOverlay: {
-  position: 'absolute',
-  top: s(40),
-  left: 0,
-  right: 0,
-  bottom: 0,
-  justifyContent: 'center',
-  alignItems: 'center',
-  zIndex: 999,
-},
-headercontainer:{
-  flexDirection: 'row',
+    position: 'absolute',
+    top: s(40),
+    left: 0,
+    right: 0,
+    bottom: 0,
+    justifyContent: 'center',
+    alignItems: 'center',
+    zIndex: 999,
+  },
+  headercontainer: {
+    flexDirection: 'row',
     top: s(40),
     justifyContent: 'space-between',
     marginBottom: s(50),
-}
-
+  },
 });

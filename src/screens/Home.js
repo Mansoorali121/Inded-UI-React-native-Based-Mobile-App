@@ -1,10 +1,12 @@
 import { StyleSheet, Text, View } from 'react-native';
 import React from 'react';
+import Indedlogo from '../components/Indedlogo';
+import Hometabheader from "../components/Hometabheader";
 
 const Home = () => {
   return (
     <View style={styles.container}>
-      <Text>Home</Text>
+      <Hometabheader/>
     </View>
   );
 };
