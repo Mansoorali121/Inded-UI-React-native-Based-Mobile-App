@@ -43,9 +43,38 @@ const Jobstabs = () => {
           );
         }}
       />
+      <View>
+        {activetab == 'Saved' && <SavedContent />}
+        {activetab == 'Applied' && <AppliedContent />}
+        {activetab == 'Interviews' && <InterviewContent />}
+        {activetab == 'Archived' && <ArchivedContent />}
+      </View>
     </View>
   );
 };
+const SavedContent = () => (
+  <View>
+    <Text style={{ fontSize: 18 }}>Saved Jobs List</Text>
+  </View>
+);
+
+const AppliedContent = () => (
+  <View>
+    <Text style={{ fontSize: 18 }}>Applied Jobs List</Text>
+  </View>
+);
+
+const InterviewContent = () => (
+  <View>
+    <Text style={{ fontSize: 18 }}>Interview Scheduled Jobs</Text>
+  </View>
+);
+
+const ArchivedContent = () => (
+  <View>
+    <Text style={{ fontSize: 18 }}>Archived Jobs</Text>
+  </View>
+);
 
 export default Jobstabs;
 
