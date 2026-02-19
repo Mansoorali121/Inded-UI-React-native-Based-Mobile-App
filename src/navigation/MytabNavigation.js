@@ -6,6 +6,7 @@ import MyJobs from '../screens/MyJobs';
 import Messages from '../screens/Messages';
 import Profile from '../screens/Profile';
 import CoustomTabBar from './CoustomTabBar';
+import { s } from 'react-native-size-matters';
 
 const Tab = createBottomTabNavigator();
 
@@ -14,7 +15,7 @@ const MytabNavigation = () => {
       <Tab.Navigator
         screenOptions={{
           tabBarStyle: {
-            height: 60,
+            height:s( 60),
             // borderTopWidth: 0,
             // elevation: 0,
             // shadowOpacity: 0,

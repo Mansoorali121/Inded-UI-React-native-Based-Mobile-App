@@ -1,12 +1,13 @@
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import React from 'react';
+import { s, vs } from 'react-native-size-matters';
 
 const CoustomTabBar = ({ state, descriptors, navigation }) => {
   return (
     <View
       style={{
         flexDirection: 'row',
-        height: 80,
+        height: s(80),
         backgroundColor: '#fff',
         justifyContent: 'space-evenly',
         alignItems: 'center',
@@ -19,7 +20,7 @@ const CoustomTabBar = ({ state, descriptors, navigation }) => {
             style={{
               justifyContent: 'center',
               alignItems: 'center',
-              gap: 10,
+              gap: s(10),
               borderTopWidth: state.index == index ? 2 : 0,
               borderTopColor: 'blue',
               height: '100%',
@@ -38,8 +39,8 @@ const CoustomTabBar = ({ state, descriptors, navigation }) => {
                   : require('../assets/user.png')
               }
               style={{
-                height: 24,
-                width: 24,
+                height: s(24),
+                width: vs(24),
                 tintColor: color,
               }}
             />
