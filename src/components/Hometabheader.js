@@ -26,6 +26,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
-  logoimage: { height: s(40), width: vs(100), marginBottom: s(10) },
-  logoimage2: { height: s(30), width: vs(30), marginLeft: s(10), top:s(10) },
+  logoimage: { height: s(30), width: vs(80), marginBottom: s(10) },
+  logoimage2: { height: s(25), width: vs(25), marginLeft: s(10), top: s(10) },
 });
