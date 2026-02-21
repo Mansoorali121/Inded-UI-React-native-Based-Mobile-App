@@ -36,6 +36,7 @@ const Jobstabs = () => {
               <Text
                 style={{
                   color: activetab == item ? Active_text : Inacctive_text,
+                  fontWeight: activetab == item ? '600' : '',
                 }}
               >
                 {item}
@@ -103,5 +104,5 @@ const styles = StyleSheet.create({
     marginTop: vs(10),
     marginBottom: s(10),
   },
-  tabscontainer:{ height: vs(400), width: s(310), marginTop: s(20) }
+  tabscontainer: { height: vs(400), width: s(310), marginTop: s(20) },
 });

@@ -21,6 +21,7 @@ const Appliedjobs = () => {
           <UpdateStatusbtn />
         </View>
       </View>
+      <Text style={styles.footertext}>Not seeing an application?</Text>
     </View>
   );
 };
@@ -55,4 +56,5 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     marginTop: s(15),
   },
+  footertext:{textAlign:"center",marginTop:s(60),color:"blue",fontSize:s(16)},
 });
