@@ -12,10 +12,10 @@ const Home = () => {
       {/* Content of the Blue type Background */}
       <View style={styles.topcontaienr}>
         <View style={styles.card}>
-          <Text>Hello Hello </Text>
-          <SearchButton />
+          <SearchButton  placeholder = "Enter Job title" />
         </View>
       </View>
+       
     </View>
   );
 };
