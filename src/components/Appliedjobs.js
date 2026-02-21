@@ -56,5 +56,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     marginTop: s(15),
   },
-  footertext:{textAlign:"center",marginTop:s(60),color:"blue",fontSize:s(16)},
+  footertext: {
+    textAlign: 'center',
+    marginTop: s(60),
+    color: 'blue',
+    fontSize: s(16),
+  },
 });

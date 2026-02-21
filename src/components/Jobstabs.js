@@ -8,6 +8,7 @@ import {
 import React, { useState } from 'react';
 import { s, vs } from 'react-native-size-matters';
 import AppliedJobs from '../components/Appliedjobs';
+import  Savedjobcard from "../components/Savedjobcard";
 
 const TabsArray = ['Saved', 'Applied', 'Interviews', 'Archived'];
 
@@ -56,7 +57,7 @@ const Jobstabs = () => {
 };
 const SavedContent = () => (
   <View>
-    <Text style={{ fontSize: 18 }}>Saved Jobs List</Text>
+    <Savedjobcard/>
   </View>
 );
 
