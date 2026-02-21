@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import {
   FlatList,
   StyleSheet,
@@ -6,122 +5,94 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
+import React, { useState } from 'react';
 import { s, vs } from 'react-native-size-matters';
 
 const TabsArray = ['Saved', 'Applied', 'Interviews', 'Archived'];
 
 const Active_bg = 'black';
 const Active_text = '#fff';
-const Inactive_text = '#000';
+const Inacctive_text = '#0000';
 
 const Jobstabs = () => {
   const [activetab, setActivetab] = useState('Saved');
-
   return (
     <View style={styles.container}>
-      
-      {/* 🔥 Tabs Section */}
-      <View style={styles.tabsContainer}>
-        <FlatList
-          horizontal
-          showsHorizontalScrollIndicator={false}
-          data={TabsArray}
-          keyExtractor={(item) => item}
-          contentContainerStyle={{ alignItems: 'center' }}
-          renderItem={({ item }) => (
+      <FlatList
+        horizontal
+        showsHorizontalScrollIndicator={false}
+        data={TabsArray}
+        keyExtractor={item => item}
+        renderItem={({ item }) => {
+          return (
             <TouchableOpacity
               onPress={() => setActivetab(item)}
               style={[
                 styles.tabbutton,
-                activetab === item && { backgroundColor: Active_bg },
+                activetab == item && { backgroundColor: Active_bg },
               ]}
             >
               <Text
                 style={{
-                  color:
-                    activetab === item
-                      ? Active_text
-                      : Inactive_text,
-                  fontWeight: '600',
+                  color: activetab == item ? Active_text : Inacctive_text,
                 }}
               >
                 {item}
               </Text>
             </TouchableOpacity>
-          )}
-        />
+          );
+        }}
+      />
+      <View style={{ height:vs(300),width:s(310),marginTop:s(20)}}>
+        {activetab == 'Saved' && <SavedContent />}
+        {activetab == 'Applied' && <AppliedContent />}
+        {activetab == 'Interviews' && <InterviewContent />}
+        {activetab == 'Archived' && <ArchivedContent />}
       </View>
-
-      {/* 🔥 Content Section */}
-      <View style={styles.contentContainer}>
-        {activetab === 'Saved' && <SavedContent />}
-        {activetab === 'Applied' && <AppliedContent />}
-        {activetab === 'Interviews' && <InterviewContent />}
-        {activetab === 'Archived' && <ArchivedContent />}
-      </View>
-
     </View>
   );
 };
-
-/* ---------------- Content Components ---------------- */
-
 const SavedContent = () => (
   <View>
-    <Text style={styles.contentText}>Saved Jobs List</Text>
+    <Text style={{ fontSize: 18 }}>Saved Jobs List</Text>
   </View>
 );
 
 const AppliedContent = () => (
   <View>
-    <Text style={styles.contentText}>Applied Jobs List</Text>
+    <Text style={{ fontSize: 18 }}>Applied Jobs List</Text>
   </View>
 );
 
 const InterviewContent = () => (
   <View>
-    <Text style={styles.contentText}>Interview Scheduled Jobs</Text>
+    <Text style={{ fontSize: 18 }}>Interview Scheduled Jobs</Text>
   </View>
 );
 
 const ArchivedContent = () => (
   <View>
-    <Text style={styles.contentText}>Archived Jobs</Text>
+    <Text style={{ fontSize: 18 }}>Archived Jobs</Text>
   </View>
 );
 
 export default Jobstabs;
 
-/* ---------------- Styles ---------------- */
-
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
+    borderRadius: s(20),
   },
-
-  tabsContainer: {
-    height: vs(70),
-    justifyContent: 'center',
-  },
-
-  contentContainer: {
-    flex: 1,
-    padding: vs(16),
-  },
-
   tabbutton: {
-    backgroundColor: '#f1f1f1',
+    backgroundColor: '#f9f9f9',
+    marginBottom: vs(5),
     marginRight: s(10),
     alignItems: 'center',
     justifyContent: 'center',
-    height: s(45),
-    paddingHorizontal: s(18),
+    height: s(50),
+    marginTop: vs(10),
+    paddingHorizontal: s(16),
+    marginStart: s(5),
     borderRadius: s(30),
-  },
-
-  contentText: {
-    fontSize: 18,
-    fontWeight: '600',
+    width: vs(100),
   },
 });
