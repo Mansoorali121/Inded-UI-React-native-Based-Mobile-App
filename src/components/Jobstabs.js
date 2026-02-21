@@ -7,7 +7,7 @@ import {
 } from 'react-native';
 import React, { useState } from 'react';
 import { s, vs } from 'react-native-size-matters';
-import AppliedJobs from "../components/Appliedjobs";
+import AppliedJobs from '../components/Appliedjobs';
 
 const TabsArray = ['Saved', 'Applied', 'Interviews', 'Archived'];
 
@@ -16,7 +16,7 @@ const Active_text = '#fff';
 const Inacctive_text = '#0000';
 
 const Jobstabs = () => {
-  const [activetab, setActivetab] = useState('Saved');
+  const [activetab, setActivetab] = useState('Applied');
   return (
     <View style={styles.container}>
       <FlatList
@@ -44,7 +44,7 @@ const Jobstabs = () => {
           );
         }}
       />
-      <View style={{height:vs(400),width:s(310),marginTop:s(20)}}>
+      <View style={styles.tabscontainer}>
         {activetab == 'Saved' && <SavedContent />}
         {activetab == 'Applied' && <AppliedContent />}
         {activetab == 'Interviews' && <InterviewContent />}
@@ -60,9 +60,9 @@ const SavedContent = () => (
 );
 
 const AppliedContent = () => (
-  <View style={{marginHorizontal:s(10)}}>
+  <View style={{ marginHorizontal: s(10) }}>
     <Text style={styles.daystext}>Past 14 Days</Text>
-    <AppliedJobs/>
+    <AppliedJobs />
   </View>
 );
 
@@ -97,5 +97,11 @@ const styles = StyleSheet.create({
     borderRadius: s(30),
     width: vs(100),
   },
-  daystext:{fontSize:s(20),fontFamily:"Langar-Regular",marginTop:vs(10)},
+  daystext: {
+    fontSize: s(20),
+    fontFamily: 'Langar-Regular',
+    marginTop: vs(10),
+    marginBottom: s(10),
+  },
+  tabscontainer:{ height: vs(400), width: s(310), marginTop: s(20) }
 });
