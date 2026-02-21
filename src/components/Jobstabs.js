@@ -7,6 +7,7 @@ import {
 } from 'react-native';
 import React, { useState } from 'react';
 import { s, vs } from 'react-native-size-matters';
+import AppliedJobs from "../components/Appliedjobs";
 
 const TabsArray = ['Saved', 'Applied', 'Interviews', 'Archived'];
 
@@ -43,7 +44,7 @@ const Jobstabs = () => {
           );
         }}
       />
-      <View style={{ height:vs(300),width:s(310),marginTop:s(20)}}>
+      <View style={{height:vs(400),width:s(310),marginTop:s(20)}}>
         {activetab == 'Saved' && <SavedContent />}
         {activetab == 'Applied' && <AppliedContent />}
         {activetab == 'Interviews' && <InterviewContent />}
@@ -59,8 +60,9 @@ const SavedContent = () => (
 );
 
 const AppliedContent = () => (
-  <View>
-    <Text style={{ fontSize: 18 }}>Applied Jobs List</Text>
+  <View style={{marginHorizontal:s(10)}}>
+    <Text style={styles.daystext}>Past 14 Days</Text>
+    <AppliedJobs/>
   </View>
 );
 
@@ -95,4 +97,5 @@ const styles = StyleSheet.create({
     borderRadius: s(30),
     width: vs(100),
   },
+  daystext:{fontSize:s(20),fontFamily:"Langar-Regular",marginTop:vs(10)},
 });
