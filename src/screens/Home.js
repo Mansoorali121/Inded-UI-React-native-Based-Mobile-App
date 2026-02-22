@@ -4,6 +4,7 @@ import Indedlogo from '../components/Indedlogo';
 import Hometabheader from '../components/Hometabheader';
 import { s } from 'react-native-size-matters';
 import SearchButton from '../components/SearchButton';
+import Modalheader from "../components/Modalheader";
 
 const Home = () => {
   const [modalvisible, setModalvisible] = useState(false);
@@ -19,13 +20,15 @@ const Home = () => {
             onPress={() => setModalvisible(true)}
           />
           <Modal visible={modalvisible} animationType="slide">
-            <Text>Modal is Visible</Text>
+                <Modalheader/>
+          
             <Text
               onPress={() => setModalvisible(false)}
-              style={{ marginTop: s(20), color: 'red', textAlign: 'center' }}
+              style={styles.closebtn}
             >
               Close the model{' '}
             </Text>
+          
           </Modal>
         </View>
       </View>
@@ -39,4 +42,5 @@ const styles = StyleSheet.create({
   container: { backgroundColor: '#fff', flex: 1 },
   topcontaienr: { marginTop: s(30), marginHorizontal: s(15) },
   card: { backgroundColor: '#e7fffdc4', height: '100%', borderRadius: s(10) },
+  closebtn:{ marginTop: s(20), color: 'red', textAlign: 'center' }
 });
