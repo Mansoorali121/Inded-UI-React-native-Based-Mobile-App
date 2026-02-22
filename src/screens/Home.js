@@ -1,5 +1,5 @@
 import { Modal, StyleSheet, Text, View } from 'react-native';
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import Indedlogo from '../components/Indedlogo';
 import Hometabheader from '../components/Hometabheader';
 import { s } from 'react-native-size-matters';
@@ -7,6 +7,7 @@ import SearchButton from '../components/SearchButton';
 
 const Home = () => {
   const [modalvisible, setModalvisible] = useState(false);
+  // const [inputRef] = useRef();
   return (
     <View style={styles.container}>
       <Hometabheader />
