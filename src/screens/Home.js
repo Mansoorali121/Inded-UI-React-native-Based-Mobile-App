@@ -14,6 +14,7 @@ import SearchButton from '../components/SearchButton';
 import Modalheader from '../components/Modalheader';
 import Modalfooter from '../components/Modalfooter';
 import Backbutton from '../components/Backbutton';
+import Modalbtn from "../components/Modalbtn";
 
 const Home = () => {
   const [modalvisible, setModalvisible] = useState(false);
@@ -29,7 +30,7 @@ const Home = () => {
             onPress={() => setModalvisible(true)}
           />
           <Modal visible={modalvisible} animationType="slide">
-            <TouchableOpacity onPress={()=>setModalvisible(false)}>
+            <TouchableOpacity onPress={() => setModalvisible(false)}>
               <Image
                 source={require('../assets/left-arrow.png')}
                 style={styles.backbutton}
@@ -38,9 +39,11 @@ const Home = () => {
 
             <Modalheader />
 
-           
             <Modalfooter />
+            
+            <Modalbtn/>
           </Modal>
+
         </View>
       </View>
     </View>
