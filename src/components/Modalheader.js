@@ -6,7 +6,7 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import React, { useEffect , useRef} from 'react';
+import React, { useEffect, useRef } from 'react';
 import { s } from 'react-native-size-matters';
 import { useNavigation } from '@react-navigation/native';
 
@@ -29,8 +29,9 @@ const Modalheader = () => {
             source={require('../assets/search.png')}
             style={styles.image}
           />
-          <TextInput  placeholder = "" ref={inputRef} />
+          <TextInput placeholder="" ref={inputRef} />
         </View>
+        <Text style={styles.searchestext}>More recent searches</Text>
       </View>
     </View>
   );
@@ -51,5 +52,12 @@ const styles = StyleSheet.create({
     padding: s(5),
     borderRadius: s(10),
   },
-  inputcontainer: { alignItems: 'center', marginTop: s(6) },
+  inputcontainer: { alignItems: 'center', marginTop: s(6), marginStart:s(15)
+   },
+  searchestext: {
+    marginTop: s(40),
+    color: 'blue',
+    fontSize: s(16),
+    fontFamily: 'Redressed-Regular',
+  },
 });
