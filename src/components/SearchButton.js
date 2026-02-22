@@ -1,27 +1,27 @@
-import { Image, StyleSheet, Text, TextInput, View } from 'react-native';
+import { Image, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import React from 'react';
 import { s } from 'react-native-size-matters';
 
-const SearchButton = ({ ...props }) => {
+const SearchButton = ({ onPress, ...props }) => {
   return (
     <View style={styles.container}>
       <View style={styles.cardcontainer}>
-        <View style={styles.subview}>
+        <TouchableOpacity style={styles.subview} onPress={onPress}>
           <Image
             source={require('../assets/search.png')}
             style={styles.searchimage}
           />
           <TextInput {...props} style={styles.input} />
-        </View>
+        </TouchableOpacity>
         <View style={styles.line}></View>
         {/* Location */}
-        <View style={styles.subview}>
+        <TouchableOpacity onPress={onPress} style={styles.subview}>
           <Image
             source={require('../assets/pin.png')}
             style={styles.searchimage}
           />
           <TextInput {...props} style={styles.input} placeholder="Korangi" />
-        </View>
+        </TouchableOpacity>
       </View>
     </View>
   );
@@ -49,5 +49,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     top: s(10),
+    height: s(34),
+    width: s(0.3),
   },
 });
