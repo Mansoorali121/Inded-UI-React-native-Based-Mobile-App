@@ -11,6 +11,8 @@ import { s, vs } from 'react-native-size-matters';
 import AppliedJobs from '../components/Appliedjobs';
 import Savedjobcard from '../components/Savedjobcard';
 import ArchievedJobsCard from '../components/ArchievedJobsCard';
+import Backbutton from './Backbutton';
+import SavedItems from '../components/SavedItems';
 
 const TabsArray = ['Saved', 'Applied', 'Interviews', 'Archived'];
 
@@ -91,12 +93,13 @@ const ArchivedContent = ({ modalvisible, setModalvisible }) => (
     <TouchableOpacity activeOpacity={0.6}>
       <ArchievedJobsCard />
     </TouchableOpacity>
-    <Modal visible={modalvisible}>
+    <Modal visible={modalvisible} animationType="slide" >
       <TouchableOpacity
         onPress={() => setModalvisible(false)}
-        style={{ marginTop: s(40), marginStart: s(40) }}
+        style={styles.headercontainer}
       >
-        <Text>Close the modal </Text>
+        <Backbutton onPress={() => setModalvisible(false)} />
+        <SavedItems />
       </TouchableOpacity>
     </Modal>
   </View>
@@ -128,4 +131,10 @@ const styles = StyleSheet.create({
     marginBottom: s(10),
   },
   tabscontainer: { height: vs(400), width: s(310), marginTop: s(20) },
+  headercontainer:{
+          marginTop: s(20),
+          marginStart: s(20),
+          justifyContent: 'space-between',
+          flexDirection: 'row',
+        }
 });
