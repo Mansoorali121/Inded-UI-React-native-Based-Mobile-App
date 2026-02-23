@@ -1,5 +1,6 @@
 import {
   FlatList,
+  Modal,
   StyleSheet,
   Text,
   TouchableOpacity,
@@ -19,6 +20,8 @@ const Inacctive_text = '#0000';
 
 const Jobstabs = () => {
   const [activetab, setActivetab] = useState('Applied');
+  const [modalvisible, setModalvisible] = useState(true);
+
   return (
     <View style={styles.container}>
       <FlatList
@@ -51,7 +54,12 @@ const Jobstabs = () => {
         {activetab == 'Saved' && <SavedContent />}
         {activetab == 'Applied' && <AppliedContent />}
         {activetab == 'Interviews' && <InterviewContent />}
-        {activetab == 'Archived' && <ArchivedContent />}
+        {activetab == 'Archived' && (
+          <ArchivedContent
+            modalvisible={modalvisible}
+            setModalvisible={setModalvisible}
+          />
+        )}
       </View>
     </View>
   );
@@ -75,14 +83,22 @@ const InterviewContent = () => (
   </View>
 );
 
-const ArchivedContent = () => (
+const ArchivedContent = ({ modalvisible, setModalvisible }) => (
   <View style={{ gap: s(4) }}>
-    <TouchableOpacity activeOpacity={0.6}>
+    <TouchableOpacity activeOpacity={0.6} onPress={() => setModalvisible(true)}>
       <ArchievedJobsCard />
     </TouchableOpacity>
     <TouchableOpacity activeOpacity={0.6}>
       <ArchievedJobsCard />
     </TouchableOpacity>
+    <Modal visible={modalvisible}>
+      <TouchableOpacity
+        onPress={() => setModalvisible(false)}
+        style={{ marginTop: s(40), marginStart: s(40) }}
+      >
+        <Text>Close the modal </Text>
+      </TouchableOpacity>
+    </Modal>
   </View>
 );
 
