@@ -5,7 +5,9 @@ import Topline from './Topline';
 
 const Archievedparagraph = () => {
   return (
-    <ScrollView>
+    <View>
+
+ 
       <View style={styles.container}>
         <View style={styles.titlecontainer}>
           <Image
@@ -43,9 +45,8 @@ const Archievedparagraph = () => {
           </View>
         </View>
       </View>
-      
-      <Topline/>
-    </ScrollView>
+      <Topline />
+         </View>
   );
 };
 

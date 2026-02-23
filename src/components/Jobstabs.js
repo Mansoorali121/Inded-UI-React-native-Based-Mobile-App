@@ -1,6 +1,7 @@
 import {
   FlatList,
   Modal,
+  ScrollView,
   StyleSheet,
   Text,
   TouchableOpacity,
@@ -15,6 +16,7 @@ import Backbutton from './Backbutton';
 import SavedItems from '../components/SavedItems';
 import Archievedparagraph from '../components/Archievedparagraph';
 import Topline from '../components/Topline';
+import Jobdetails from '../components/Jobdetails';
 
 const TabsArray = ['Saved', 'Applied', 'Interviews', 'Archived'];
 
@@ -103,7 +105,11 @@ const ArchivedContent = ({ modalvisible, setModalvisible }) => (
         <Backbutton onPress={() => setModalvisible(false)} />
         <SavedItems />
       </TouchableOpacity>
-      <Archievedparagraph />
+      <ScrollView>
+        <Archievedparagraph />
+        {/* Jobs Details Add here */}
+        <Jobdetails />
+      </ScrollView>
     </Modal>
   </View>
 );
