@@ -4,7 +4,7 @@ import { s, vs } from 'react-native-size-matters';
 
 const UpdateStatusbtn = () => {
   return (
-    <TouchableOpacity style={styles.container}>
+    <TouchableOpacity style={styles.container} activeOpacity={0.7}>
       <Text style={styles.btntext}>Update Status</Text>
     </TouchableOpacity>
   );

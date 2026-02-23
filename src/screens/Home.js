@@ -30,7 +30,7 @@ const Home = () => {
             onPress={() => setModalvisible(true)}
           />
           <Modal visible={modalvisible} animationType="slide">
-            <TouchableOpacity onPress={() => setModalvisible(false)}>
+            <TouchableOpacity onPress={() => setModalvisible(false)} activeOpacity={0.5}>
               <Image
                 source={require('../assets/left-arrow.png')}
                 style={styles.backbutton}

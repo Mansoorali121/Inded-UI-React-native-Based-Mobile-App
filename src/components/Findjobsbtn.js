@@ -4,7 +4,7 @@ import { s, vs } from 'react-native-size-matters';
 
 const Findjobsbtn = () => {
   return (
-    <TouchableOpacity style={styles.btn}>
+    <TouchableOpacity style={styles.btn} activeOpacity={0.7}>
       <Text style={styles.jobstext}>Find Jobs</Text>
       <Image source={require('../assets/right.png')} style={styles.image} />
     </TouchableOpacity>

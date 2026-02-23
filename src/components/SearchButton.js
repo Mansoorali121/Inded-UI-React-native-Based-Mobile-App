@@ -6,7 +6,7 @@ const SearchButton = ({ onPress, ...props }) => {
   return (
     <View style={styles.container}>
       <View style={styles.cardcontainer}>
-        <TouchableOpacity style={styles.subview} onPress={onPress}>
+        <TouchableOpacity style={styles.subview} onPress={onPress} activeOpacity={0.7}>
           <Image
             source={require('../assets/search.png')}
             style={styles.searchimage}

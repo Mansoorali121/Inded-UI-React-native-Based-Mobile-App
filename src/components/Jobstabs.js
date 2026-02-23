@@ -8,8 +8,8 @@ import {
 import React, { useState } from 'react';
 import { s, vs } from 'react-native-size-matters';
 import AppliedJobs from '../components/Appliedjobs';
-import  Savedjobcard from "../components/Savedjobcard";
-import ArchievedJobsCard from "../components/ArchievedJobsCard";
+import Savedjobcard from '../components/Savedjobcard';
+import ArchievedJobsCard from '../components/ArchievedJobsCard';
 
 const TabsArray = ['Saved', 'Applied', 'Interviews', 'Archived'];
 
@@ -58,7 +58,7 @@ const Jobstabs = () => {
 };
 const SavedContent = () => (
   <View>
-    <Savedjobcard/>
+    <Savedjobcard />
   </View>
 );
 
@@ -76,9 +76,14 @@ const InterviewContent = () => (
 );
 
 const ArchivedContent = () => (
-  <TouchableOpacity>
-    <ArchievedJobsCard/>
-  </TouchableOpacity>
+  <View style={{ gap: s(4) }}>
+    <TouchableOpacity activeOpacity={0.6}>
+      <ArchievedJobsCard />
+    </TouchableOpacity>
+    <TouchableOpacity activeOpacity={0.6}>
+      <ArchievedJobsCard />
+    </TouchableOpacity>
+  </View>
 );
 
 export default Jobstabs;
