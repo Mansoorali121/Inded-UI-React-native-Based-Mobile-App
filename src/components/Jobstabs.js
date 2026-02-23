@@ -13,6 +13,8 @@ import Savedjobcard from '../components/Savedjobcard';
 import ArchievedJobsCard from '../components/ArchievedJobsCard';
 import Backbutton from './Backbutton';
 import SavedItems from '../components/SavedItems';
+import Archievedparagraph from '../components/Archievedparagraph';
+import Topline from '../components/Topline';
 
 const TabsArray = ['Saved', 'Applied', 'Interviews', 'Archived'];
 
@@ -93,7 +95,7 @@ const ArchivedContent = ({ modalvisible, setModalvisible }) => (
     <TouchableOpacity activeOpacity={0.6}>
       <ArchievedJobsCard />
     </TouchableOpacity>
-    <Modal visible={modalvisible} animationType="slide" >
+    <Modal visible={modalvisible} animationType="slide">
       <TouchableOpacity
         onPress={() => setModalvisible(false)}
         style={styles.headercontainer}
@@ -101,6 +103,7 @@ const ArchivedContent = ({ modalvisible, setModalvisible }) => (
         <Backbutton onPress={() => setModalvisible(false)} />
         <SavedItems />
       </TouchableOpacity>
+      <Archievedparagraph />
     </Modal>
   </View>
 );
@@ -131,10 +134,10 @@ const styles = StyleSheet.create({
     marginBottom: s(10),
   },
   tabscontainer: { height: vs(400), width: s(310), marginTop: s(20) },
-  headercontainer:{
-          marginTop: s(20),
-          marginStart: s(20),
-          justifyContent: 'space-between',
-          flexDirection: 'row',
-        }
+  headercontainer: {
+    marginTop: s(20),
+    marginStart: s(20),
+    justifyContent: 'space-between',
+    flexDirection: 'row',
+  },
 });
