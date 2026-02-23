@@ -14,7 +14,7 @@ import SearchButton from '../components/SearchButton';
 import Modalheader from '../components/Modalheader';
 import Modalfooter from '../components/Modalfooter';
 import Backbutton from '../components/Backbutton';
-import Modalbtn from "../components/Modalbtn";
+import Modalbtn from '../components/Modalbtn';
 
 const Home = () => {
   const [modalvisible, setModalvisible] = useState(false);
@@ -40,10 +40,9 @@ const Home = () => {
             <Modalheader />
 
             <Modalfooter />
-            
-            <Modalbtn/>
-          </Modal>
 
+            <Modalbtn />
+          </Modal>
         </View>
       </View>
     </View>

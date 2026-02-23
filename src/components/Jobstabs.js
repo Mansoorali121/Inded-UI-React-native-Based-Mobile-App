@@ -9,6 +9,7 @@ import React, { useState } from 'react';
 import { s, vs } from 'react-native-size-matters';
 import AppliedJobs from '../components/Appliedjobs';
 import  Savedjobcard from "../components/Savedjobcard";
+import ArchievedJobsCard from "../components/ArchievedJobsCard";
 
 const TabsArray = ['Saved', 'Applied', 'Interviews', 'Archived'];
 
@@ -76,7 +77,7 @@ const InterviewContent = () => (
 
 const ArchivedContent = () => (
   <TouchableOpacity>
-    <Text style={{ fontSize: 18 }}>Archived Jobs</Text>
+    <ArchievedJobsCard/>
   </TouchableOpacity>
 );
 
