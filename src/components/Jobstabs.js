@@ -75,9 +75,9 @@ const InterviewContent = () => (
 );
 
 const ArchivedContent = () => (
-  <View>
+  <TouchableOpacity>
     <Text style={{ fontSize: 18 }}>Archived Jobs</Text>
-  </View>
+  </TouchableOpacity>
 );
 
 export default Jobstabs;
