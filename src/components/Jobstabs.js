@@ -17,7 +17,9 @@ import SavedItems from '../components/SavedItems';
 import Archievedparagraph from '../components/Archievedparagraph';
 import Topline from '../components/Topline';
 import Jobdetails from '../components/Jobdetails';
-import ArDescription from "../components/ArDescription";
+import ArDescription from '../components/ArDescription';
+import Reportjob from '../components/Reportjob';
+
 
 const TabsArray = ['Saved', 'Applied', 'Interviews', 'Archived'];
 
@@ -110,9 +112,10 @@ const ArchivedContent = ({ modalvisible, setModalvisible }) => (
         <Archievedparagraph />
         {/* Jobs Details Add here */}
         <Jobdetails />
-        <Topline/>
+        <Topline />
         {/*  */}
-        <ArDescription/>
+        <ArDescription />
+        <Reportjob/>
       </ScrollView>
     </Modal>
   </View>

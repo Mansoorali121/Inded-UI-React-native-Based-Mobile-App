@@ -20,7 +20,7 @@ const ArDescription = () => {
           style={styles.input}
         >
           <Text style={styles.btntext}>
-            {showfull ? 'View Less' : 'View More'}{' '}
+            {showfull ? 'Show less' : 'Show more'}{' '}
           </Text>
           <Image
             source={
@@ -40,7 +40,7 @@ const ArDescription = () => {
 export default ArDescription;
 
 const styles = StyleSheet.create({
-  container: { marginHorizontal: s(20), marginTop: s(40) },
+  container: { marginHorizontal: s(20), marginTop: s(20) },
   title: { fontSize: s(20), fontWeight: '500', marginBottom: s(10) },
   description: {
     fontSize: s(13),
@@ -50,15 +50,14 @@ const styles = StyleSheet.create({
   },
   image: { height: s(24), width: s(24) },
   input: {
-    width: '90%',
-    backgroundColor: '#edededb5',
+    width: '100%',
+    backgroundColor: '#fffcfce4',
     alignItems: 'center',
     justifyContent: 'center',
     flexDirection: 'row',
-    padding: s(5),
     borderRadius: s(10),
-    height: s(50),
+    height: s(60),
   },
-  buttoncontainer: { alignItems: 'center', marginTop: s(20) },
+  buttoncontainer: { alignItems: 'center', marginTop: s(10) },
   btntext: { color: 'blue', fontSize: s(15), fontWeight: 'bold' },
 });
