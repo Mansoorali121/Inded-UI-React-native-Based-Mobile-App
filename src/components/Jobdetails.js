@@ -14,13 +14,21 @@ const Jobdetails = () => {
         <View style={styles.itemcontainer}>
           <Image source={require('../assets/clock.png')} style={styles.img} />
           <Text style={styles.item}>Full time</Text>
-        </View>{' '}
+        </View>
         <View style={styles.itemcontainer}>
           <Image
             source={require('../assets/maps-and-flags.png')}
             style={styles.img}
           />
           <Text style={styles.item}>Lahore</Text>
+        </View>
+        <Text style={styles.locationtext}>Location</Text>
+        <View style={{ flexDirection: 'row' }}>
+          <Image
+            source={require('../assets/maps-and-flags.png')}
+            style={styles.img}
+          />
+          <Text style={styles.item}> Lahore</Text>
         </View>
       </View>
     </View>
@@ -39,5 +47,10 @@ const styles = StyleSheet.create({
   img: { height: s(24), width: s(24) },
   itemcontainer: { flexDirection: 'row', gap: s(10) },
   items: { gap: s(25) },
-  item:{fontSize:s(16), fontWeight:"500"},
+  item: { fontSize: s(16), fontWeight: '500' },
+  locationtext: {
+    fontSize: s(18),
+    marginTop: s(15),
+    fontFamily: 'Audiowide-Regular',
+  },
 });
