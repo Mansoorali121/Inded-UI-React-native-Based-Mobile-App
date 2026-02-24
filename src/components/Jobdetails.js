@@ -31,6 +31,7 @@ const Jobdetails = () => {
           <Text style={styles.item}> Lahore</Text>
         </View>
       </View>
+      
     </View>
   );
 };
