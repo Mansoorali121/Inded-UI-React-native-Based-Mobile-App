@@ -16,15 +16,23 @@ const ArDescription = () => {
       <View style={styles.buttoncontainer}>
         <TouchableOpacity
           onPress={() => setShowfull(!showfull)}
+          activeOpacity={0.6}
           style={styles.input}
         >
-          <Text style={styles.btntext}>Show More </Text>
-          <Image source={require('../assets/star.png')} style={styles.image} />
+          <Text style={styles.btntext}>
+            {showfull ? 'View Less' : 'View More'}{' '}
+          </Text>
+          <Image
+            source={
+              showfull
+                ? require('../assets/arrow-up.png')
+                : require('../assets/down-arrow.png')
+            }
+            style={styles.image}
+          />
         </TouchableOpacity>
       </View>
-      <View style={{marginTop:s
-        (40)
-      }} />
+      <View style={{ marginTop: s(40) }} />
     </View>
   );
 };
@@ -32,25 +40,25 @@ const ArDescription = () => {
 export default ArDescription;
 
 const styles = StyleSheet.create({
-  container: { marginHorizontal: s(20), marginTop: s(10) },
-  title: { fontSize: s(20), fontWeight: '500' },
+  container: { marginHorizontal: s(20), marginTop: s(40) },
+  title: { fontSize: s(20), fontWeight: '500', marginBottom: s(10) },
   description: {
-    fontSize: s(14),
+    fontSize: s(13),
     paddingHorizontal: s(1),
     marginBottom: s(20),
     opacity: s(0.5),
   },
   image: { height: s(24), width: s(24) },
   input: {
-    width: '80%',
-    backgroundColor: '#fff',
+    width: '90%',
+    backgroundColor: '#edededb5',
     alignItems: 'center',
     justifyContent: 'center',
     flexDirection: 'row',
     padding: s(5),
     borderRadius: s(10),
-    height:s(50)
+    height: s(50),
   },
   buttoncontainer: { alignItems: 'center', marginTop: s(20) },
-  btntext:{color:"blue",fontSize:s(15),fontWeight:'bold'},
+  btntext: { color: 'blue', fontSize: s(15), fontWeight: 'bold' },
 });
