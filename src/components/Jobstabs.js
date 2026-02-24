@@ -1,5 +1,6 @@
 import {
   FlatList,
+  Image,
   Modal,
   ScrollView,
   StyleSheet,
@@ -19,7 +20,7 @@ import Topline from '../components/Topline';
 import Jobdetails from '../components/Jobdetails';
 import ArDescription from '../components/ArDescription';
 import Reportjob from '../components/Reportjob';
-
+import Interview from "../components/Interview";
 
 const TabsArray = ['Saved', 'Applied', 'Interviews', 'Archived'];
 
@@ -88,7 +89,8 @@ const AppliedContent = () => (
 
 const InterviewContent = () => (
   <View>
-    <Text style={{ fontSize: 18 }}>Interview Scheduled Jobs</Text>
+    <Interview/>
+    
   </View>
 );
 
@@ -115,7 +117,7 @@ const ArchivedContent = ({ modalvisible, setModalvisible }) => (
         <Topline />
         {/*  */}
         <ArDescription />
-        <Reportjob/>
+        <Reportjob />
       </ScrollView>
     </Modal>
   </View>
@@ -153,4 +155,6 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     flexDirection: 'row',
   },
+  
+
 });
