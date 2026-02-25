@@ -5,6 +5,7 @@ import { s } from 'react-native-size-matters';
 import Settingheader from '../../components/drawer_components/Settingheader';
 import D_header from '../../components/drawer_components/D_header';
 import Details from '../../components/drawer_components/Details';
+import EmployerD from '../../components/drawer_components/EmployerD';
 
 const Setting = () => {
   const navigation = useNavigation();
@@ -16,6 +17,7 @@ const Setting = () => {
       <View style={styles.itemscontainer}>
         <D_header />
         <Details />
+        <EmployerD />
       </View>
     </View>
   );

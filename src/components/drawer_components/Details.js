@@ -18,6 +18,13 @@ const Details = () => {
           style={styles.image}
         />
         <Text style={styles.email}>03183436180</Text>
+        <Image
+          source={require('../../assets/small-right.png')}
+          style={[
+            styles.image,
+            { marginLeft: s(100), height: s(18), width: s(18) },
+          ]}
+        />
       </View>
       <View style={styles.emailcontainer}>
         <Image
