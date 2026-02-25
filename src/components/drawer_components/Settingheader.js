@@ -23,5 +23,5 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   image: { height: s(24), width: s(24), left: s(120) },
-  title:{fontSize:s(18),fontWeight:"600"},
+  title:{fontSize:s(16),fontWeight:"600"},
 });
