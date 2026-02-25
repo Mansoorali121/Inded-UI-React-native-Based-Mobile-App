@@ -6,6 +6,7 @@ import D2 from '../screens/D2';
 import Setting from '../screens/drawer/Setting';
 import Language from '../screens/drawer/Languuage';
 import { s } from 'react-native-size-matters';
+import Coustomdrawer from "../screens/drawer/Coustomdrawer";
 
 const Drawer = createDrawerNavigator();
 
@@ -18,8 +19,11 @@ const Profile = () => {
           borderTopWidth: 0,
           elevation: 0,
           shadowOpacity: 0,
+          width: "100%",
         },
+        
       }}
+      drawerContent={(props)=> <Coustomdrawer {...props} />}
     >
       <Drawer.Screen
         name="Setting"
