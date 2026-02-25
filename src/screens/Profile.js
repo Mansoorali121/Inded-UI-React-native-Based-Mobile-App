@@ -5,6 +5,7 @@ import D1 from '../screens/D1';
 import D2 from '../screens/D2';
 import Setting from '../screens/drawer/Setting';
 import Language from '../screens/drawer/Languuage';
+import { s } from 'react-native-size-matters';
 
 const Drawer = createDrawerNavigator();
 
@@ -24,10 +25,26 @@ const Profile = () => {
         name="Setting"
         component={Setting}
         options={{
-          drawerIcon: ({size,color}) => {
-            return <Image source={require('../assets/settings.png')}
-            style={{width:size,height:size, tintColor:color}}
-            />;
+          drawerIcon: ({ size, focused }) => {
+            return (
+              <Image
+                source={require('../assets/settings.png')}
+                style={{
+                  width: size,
+                  height: size,
+                  tintColor: focused ? 'blue' : 'black',
+                }}
+              />
+            );
+          },
+          drawerLabel: ({ size, focused }) => {
+            return (
+              <Text
+                style={{ color: focused ? 'blue' : 'black', fontSize: s(18) }}
+              >
+                Settings
+              </Text>
+            );
           },
         }}
       />
@@ -35,10 +52,22 @@ const Profile = () => {
         name="Language"
         component={Language}
         options={{
-          drawerIcon: ({size,color}) => {
-            return <Image source={require('../assets/home.png')} 
-            style={{height:size,width:size,tintColor:color}}
-            />;
+          drawerIcon: ({ size, color }) => {
+            return (
+              <Image
+                source={require('../assets/home.png')}
+                style={{ height: size, width: size, tintColor: color }}
+              />
+            );
+          },
+           drawerLabel: ({ size, focused }) => {
+            return (
+              <Text
+                style={{ color: focused ? 'blue' : 'black', fontSize: s(18) }}
+              >
+                Country and language
+              </Text>
+            );
           },
         }}
       />
