@@ -20,6 +20,7 @@ const Profile = () => {
           elevation: 0,
           shadowOpacity: 0,
           width: "100%",
+          
         },
         
       }}
@@ -29,6 +30,7 @@ const Profile = () => {
         name="Setting"
         component={Setting}
         options={{
+          headerShown:false,
           drawerIcon: ({ size, focused }) => {
             return (
               <Image
