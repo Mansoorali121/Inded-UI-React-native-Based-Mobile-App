@@ -5,9 +5,13 @@ import { s } from 'react-native-size-matters';
 const Settingheader = ({ onPress }) => {
   return (
     <View style={styles.container}>
-      <Text  style={styles.title}>Profile</Text>
-      <TouchableOpacity onPress={onPress}>
-        <Image source={require('../../assets/menu.png')} style={styles.image} />
+      <Text style={styles.title}>Profile</Text>
+
+      <TouchableOpacity onPress={onPress} style={styles.menuButton}>
+        <Image 
+          source={require('../../assets/menu.png')} 
+          style={styles.image} 
+        />
       </TouchableOpacity>
     </View>
   );
@@ -20,8 +24,20 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     marginHorizontal: s(10),
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'space-between', // ✅ correct way
   },
-  image: { height: s(24), width: s(24), left: s(120) },
-  title:{fontSize:s(16),fontWeight:"600"},
+
+  image: {
+    height: s(24),
+    width: s(24),
+  },
+
+  menuButton: {
+    padding: s(5), // touch area better ho jata hai
+  },
+
+  title: {
+    fontSize: s(16),
+    fontWeight: "600"
+  },
 });

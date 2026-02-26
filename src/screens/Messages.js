@@ -1,10 +1,11 @@
 import { StyleSheet, Text, View } from 'react-native';
 import React from 'react';
+import Messageheader from "../components/Messageheader";
 
 const Messages = () => {
   return (
     <View style={styles.container}>
-      <Text>Messages</Text>
+      <Messageheader/>
     </View>
   );
 };

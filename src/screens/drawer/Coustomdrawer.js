@@ -15,6 +15,7 @@ import Common from '../../components/drawer_components/Common';
 import CFooter from '../../components/drawer_components/CFooter';
 
 const Coustomdrawer = props => {
+  const navigation = useNavigation();
   return (
     <View style={styles.container}>
       <Closebtn onPress={() => props.navigation.closeDrawer()} />

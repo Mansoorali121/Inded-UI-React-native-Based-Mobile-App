@@ -14,10 +14,9 @@ export default Closebtn;
 
 const styles = StyleSheet.create({
   image: { height: s(24), width: s(24) },
-  closeicon: {
-    marginTop: s(40),
-    position: 'absolute',
-    right: s(0),
-    marginHorizontal: s(20),
-  },
+closeicon: {
+  marginTop: s(40),
+  alignSelf: 'flex-end',
+  marginRight: s(20),
+}
 });
