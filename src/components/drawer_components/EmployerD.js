@@ -23,6 +23,7 @@ export default EmployerD;
 
 const styles = StyleSheet.create({
   container: { marginTop: s(30) },
+  
   image: { height: s(24), width: s(24) },
   btncontainer: {
     flexDirection: 'row',

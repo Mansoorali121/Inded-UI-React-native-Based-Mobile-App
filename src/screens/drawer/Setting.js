@@ -6,6 +6,7 @@ import Settingheader from '../../components/drawer_components/Settingheader';
 import D_header from '../../components/drawer_components/D_header';
 import Details from '../../components/drawer_components/Details';
 import EmployerD from '../../components/drawer_components/EmployerD';
+import Footer from "../../components/drawer_components/Footer";
 
 const Setting = () => {
   const navigation = useNavigation();
@@ -18,6 +19,7 @@ const Setting = () => {
         <D_header />
         <Details />
         <EmployerD />
+        <Footer />
       </View>
     </View>
   );
