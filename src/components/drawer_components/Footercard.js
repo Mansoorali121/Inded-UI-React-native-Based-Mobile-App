@@ -2,28 +2,27 @@ import { Image, StyleSheet, Text, View } from 'react-native';
 import React from 'react';
 import { s } from 'react-native-size-matters';
 
-const Footer = () => {
+const Footercard = () => {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Resumes</Text>
       <View style={styles.card}>
         <View style={styles.itemcontainer}>
           <View>
             <Image
-              source={require('../../assets/pdf.png')}
+              source={require('../../assets/file.png')}
               style={styles.Image}
             />
           </View>
           <View>
-            <Text style={styles.indeedtext}>Indeed Resume </Text>
+            <Text style={styles.indeedtext}>Mansoor_mobile_app.pdf </Text>
             <Text
-              style={[styles.indeedtext, { opacity: 0.6, marginBottom: s(5), }]}
+              style={[styles.indeedtext, { opacity: 0.6, marginBottom: s(5) }]}
             >
-              Updated 24 Feb 2026
+              Added 23 Feb 2026
             </Text>
           </View>
           <Image
-            source={require('../../assets/small-right.png')}
+            source={require('../../assets/dots.png')}
             style={styles.arrow}
           />
         </View>
@@ -32,10 +31,10 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default Footercard;
 
 const styles = StyleSheet.create({
-  container: { marginTop: s(30) },
+  container: { marginTop: s(5) },
   title: {
     fontSize: s(20),
     fontFamily: 'Audiowide-Regular',
@@ -54,7 +53,7 @@ const styles = StyleSheet.create({
     height: s(90),
     borderRadius: s(20),
   },
-  indeedtext: { fontSize: s(14),fontWeight:"500" },
+  indeedtext: { fontSize: s(14), fontWeight: '500' },
   arrow: {
     height: s(16),
     width: s(16),
