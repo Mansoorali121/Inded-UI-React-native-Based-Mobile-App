@@ -8,10 +8,23 @@ const Footer = () => {
       <Text style={styles.title}>Resumes</Text>
       <View style={styles.card}>
         <View style={styles.itemcontainer}>
-          <Text>Indeed Resume </Text>
+          <View>
+            <Image
+              source={require('../../assets/pdf.png')}
+              style={styles.Image}
+            />
+          </View>
+          <View>
+            <Text style={styles.indeedtext}>Indeed Resume </Text>
+            <Text
+              style={[styles.indeedtext, { opacity: 0.7, marginBottom: s(5) }]}
+            >
+              Updated 24 Feb 2026
+            </Text>
+          </View>
           <Image
-            source={require('../../assets/small-down.png')}
-            style={styles.Image}
+            source={require('../../assets/small-right.png')}
+            style={styles.arrow}
           />
         </View>
       </View>
@@ -28,13 +41,24 @@ const styles = StyleSheet.create({
     fontFamily: 'Audiowide-Regular',
     marginBottom: s(5),
   },
-  Image: { height: s(20), width: s(20) },
+  Image: { height: s(50), width: s(50) },
   itemcontainer: {
     flexDirection: 'row',
+    alignItems: 'center',
+    marginTop: s(20),
+    marginHorizontal: s(10),
+    gap: s(10),
   },
   card: {
-    backgroundColor: '#587682',
+    backgroundColor: '#d8dee0',
     height: s(100),
     borderRadius: s(20),
+  },
+  indeedtext: { fontSize: s(14) },
+  arrow: {
+    height: s(16),
+    width: s(16),
+    position: 'absolute',
+    left: s(270),
   },
 });
