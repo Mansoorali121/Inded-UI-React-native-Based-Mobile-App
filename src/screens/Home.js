@@ -29,12 +29,17 @@ const Home = () => {
             placeholder="Enter Job title"
             onPress={() => setModalvisible(true)}
           />
-         <View style={styles.cardheader}>
-           <Text style={styles.jobtitle}>Jobs for you</Text>
-          <Text style={styles.subtitle}>Jobs based on your activity on Indeed</Text>
-         </View>
+          <View style={styles.cardheader}>
+            <Text style={styles.jobtitle}>Jobs for you</Text>
+            <Text style={styles.subtitle}>
+              Jobs based on your activity on Indeed
+            </Text>
+          </View>
           <Modal visible={modalvisible} animationType="slide">
-            <TouchableOpacity onPress={() => setModalvisible(false)} activeOpacity={0.5}>
+            <TouchableOpacity
+              onPress={() => setModalvisible(false)}
+              activeOpacity={0.5}
+            >
               <Image
                 source={require('../assets/left-arrow.png')}
                 style={styles.backbutton}
@@ -67,8 +72,7 @@ const styles = StyleSheet.create({
     height: s(24),
     width: s(24),
   },
-  cardheader:{marginTop:s(10),paddingHorizontal:s(22)},
-  jobtitle:{fontSize:s(20),fontWeight:"500",marginBottom:s(5)},
-  subtitle:{fontSize:s(14),color:"gray"},
-
+  cardheader: { marginTop: s(10), paddingHorizontal: s(22) },
+  jobtitle: { fontSize: s(20), fontWeight: '500', marginBottom: s(5) },
+  subtitle: { fontSize: s(14), color: 'gray' },
 });
