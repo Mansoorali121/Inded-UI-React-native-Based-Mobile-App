@@ -15,6 +15,7 @@ import Modalheader from '../components/Modalheader';
 import Modalfooter from '../components/Modalfooter';
 import Backbutton from '../components/Backbutton';
 import Modalbtn from '../components/Modalbtn';
+import Joblist from "../components/Jobslist";
 
 const Home = () => {
   const [modalvisible, setModalvisible] = useState(false);
@@ -35,6 +36,7 @@ const Home = () => {
               Jobs based on your activity on Indeed
             </Text>
           </View>
+          <Joblist />
           <Modal visible={modalvisible} animationType="slide">
             <TouchableOpacity
               onPress={() => setModalvisible(false)}
