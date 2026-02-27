@@ -1,4 +1,11 @@
-import { Image, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import {
+  Image,
+  StyleSheet,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import React from 'react';
 import { s } from 'react-native-size-matters';
 
@@ -6,7 +13,11 @@ const SearchButton = ({ onPress, ...props }) => {
   return (
     <View style={styles.container}>
       <View style={styles.cardcontainer}>
-        <TouchableOpacity style={styles.subview} onPress={onPress} activeOpacity={0.7}>
+        <TouchableOpacity
+          style={styles.subview}
+          onPress={onPress}
+          activeOpacity={0.7}
+        >
           <Image
             source={require('../assets/search.png')}
             style={styles.searchimage}
@@ -32,11 +43,11 @@ export default SearchButton;
 const styles = StyleSheet.create({
   container: {
     backgroundColor: '#ffff',
-    borderWidth: 1,
+    borderWidth: 2,
     borderColor: '#0000',
     width: '90%',
     borderRadius: s(10),
-    height: s(60),
+    height: s(55),
     marginTop: s(20),
     marginStart: s(20),
   },
