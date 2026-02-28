@@ -5,7 +5,6 @@ import {
   View,
   Image,
   TouchableOpacity,
-  ScrollView,
 } from 'react-native';
 import React, { useRef, useState } from 'react';
 import Indedlogo from '../components/Indedlogo';
@@ -31,12 +30,12 @@ const Home = () => {
             placeholder="Enter Job title"
             onPress={() => setModalvisible(true)}
           />
-          <ScrollView showsVerticalScrollIndicator={false} style={styles.cardheader}>
+          <View style={styles.cardheader}>
             <Text style={styles.jobtitle}>Jobs for you</Text>
             <Text style={styles.subtitle}>
               Jobs based on your activity on Indeed
             </Text>
-          </ScrollView >
+          </View>
           <Joblist />
           <Modal visible={modalvisible} animationType="slide">
             <TouchableOpacity

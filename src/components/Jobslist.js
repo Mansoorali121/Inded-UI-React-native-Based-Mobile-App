@@ -1,4 +1,4 @@
-import { FlatList, Image, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { FlatList, Image, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import React from 'react';
 import { s } from 'react-native-size-matters';
 
@@ -12,6 +12,7 @@ const Dummy_data = [
     location: ' Karachi ',
     salary: 70000,
     type: 'Full Time',
+    date:"New "
   },
   {
     id: 2,
@@ -47,6 +48,11 @@ const Jobslist = () => {
           return (
             <View style={styles.card}>
               <View style={styles.cardinner}>
+                {item.id === 1 && <View>
+                  <TouchableOpacity>
+                    <Text>{item.date}</Text>
+                  </TouchableOpacity>
+                  </View>}
                 <View style={styles.upperitems}>
                   <Text style={styles.title}>{item.title}</Text>
                   <Image
