@@ -48,11 +48,11 @@ const Jobslist = () => {
           return (
             <View style={styles.card}>
               <View style={styles.cardinner}>
-                {item.id === 1 && <View>
-                  <TouchableOpacity>
-                    <Text>{item.date}</Text>
+                {item.id === 1 && 
+                  <TouchableOpacity style={styles.newbtn}>
+                    <Text style={styles.newbtntext}>{item.date}</Text>
                   </TouchableOpacity>
-                  </View>}
+                  }
                 <View style={styles.upperitems}>
                   <Text style={styles.title}>{item.title}</Text>
                   <Image
@@ -143,4 +143,13 @@ const styles = StyleSheet.create({
     opacity: 0.7,
     fontWeight: '400',
   },
+  newbtn:{top:s(7),
+    backgroundColor:"#cee4f3",
+    width:"17%",
+    alignItems:"center",
+    borderRadius:s(10),
+    justifyContent:"center",
+    padding:s(2)
+  },
+  newbtntext:{color:"green",fontSize:s(14),fontWeight:"500"},
 });
